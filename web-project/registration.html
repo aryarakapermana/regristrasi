@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - Campus Life</title>
+</head>
+<body>
+
+<header>
+  <h1>Campus Life</h1>
+  <p>Portal informasi dan kegiatan mahasiswa</p>
+</header>
+
+<nav aria-label="Navigasi utama">
+  <a href="index.html">Home</a>
+  <a href="registration.html" aria-current="page">Registration</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <section aria-labelledby="judul-registrasi">
+    <h2 id="judul-registrasi">Registration Form</h2>
+    <p>Daftarkan diri Anda untuk mengikuti kegiatan Campus Life. Kolom bertanda * wajib diisi.</p>
+
+    <form action="#" method="post">
+
+      <!-- Kelompok 1: Data akun -->
+      <fieldset>
+        <legend>Data Akun</legend>
+
+        <div>
+          <label for="name">Nama Lengkap *</label>
+          <input type="text" id="name" name="name"
+                 autocomplete="name" minlength="3" required>
+        </div>
+
+        <div>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email"
+                 autocomplete="email" placeholder="nama@kampus.ac.id" required>
+        </div>
+
+        <div>
+          <label for="password">Password * (minimal 8 karakter)</label>
+          <input type="password" id="password" name="password"
+                 autocomplete="new-password" minlength="8"
+                 aria-describedby="petunjuk-password" required>
+          <small id="petunjuk-password">Gunakan minimal 8 karakter.</small>
+        </div>
+      </fieldset>
+
+      <!-- Kelompok 2: Data diri -->
+      <fieldset>
+        <legend>Data Diri</legend>
+
+        <div>
+          <label for="nim">NIM *</label>
+          <input type="text" id="nim" name="nim"
+                 inputmode="numeric" pattern="[0-9]{9}" maxlength="9"
+                 title="NIM terdiri dari 9 digit angka" required>
+        </div>
+
+        <div>
+          <label for="birthdate">Tanggal Lahir *</label>
+          <input type="date" id="birthdate" name="birthdate"
+                 min="1990-01-01" max="2012-12-31" required>
+        </div>
+
+        <div>
+          <label for="phone">Nomor Telepon</label>
+          <input type="tel" id="phone" name="phone"
+                 autocomplete="tel" pattern="08[0-9]{8,11}"
+                 title="Diawali 08, total 10-13 digit angka"
+                 placeholder="081234567890">
+        </div>
+
+        <div>
+          <label for="semester">Semester *</label>
+          <input type="number" id="semester" name="semester"
+                 min="1" max="14" required>
+        </div>
+      </fieldset>
+
+      <!-- Kelompok 3: Pilihan (radio) -->
+      <fieldset>
+        <legend>Jenis Kegiatan *</legend>
+        <label>
+          <input type="radio" name="activity" value="seminar" required>
+          Seminar
+        </label>
+        <label>
+          <input type="radio" name="activity" value="workshop">
+          Workshop
+        </label>
+        <label>
+          <input type="radio" name="activity" value="lomba">
+          Lomba
+        </label>
+      </fieldset>
+
+      <!-- Kelompok 4: Bidang minat (checkbox) -->
+      <fieldset>
+        <legend>Bidang Minat</legend>
+        <label>
+          <input type="checkbox" name="interest" value="teknologi">
+          Teknologi
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="seni">
+          Seni &amp; Budaya
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="olahraga">
+          Olahraga
+        </label>
+      </fieldset>
+
+      <!-- Kolom tambahan -->
+      <div>
+        <label for="motivation">Alasan Mengikuti Kegiatan</label>
+        <textarea id="motivation" name="motivation" rows="4"
+                  maxlength="300"></textarea>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="agree" value="yes" required>
+          Saya menyatakan data di atas benar *
+        </label>
+      </div>
+
+      <div>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+      </div>
+
+    </form>
+  </section>
+
+  <aside aria-labelledby="judul-info">
+    <h2 id="judul-info">Informasi</h2>
+    <p>Butuh bantuan? Hubungi pengelola melalui halaman
+       <a href="contact.html">Contact Campus Life</a>.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2026 Campus Life</p>
+</footer>
+
+</body>
+</html>
